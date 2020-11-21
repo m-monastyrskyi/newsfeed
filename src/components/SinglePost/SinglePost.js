@@ -11,8 +11,8 @@ const SinglePost = ({ post }) => {
     });
 
     return (
-        <article className="post">
-            <a href={url} className="post__link"/>
+        <article className={'post'}>
+            <a href={url} className={'post__link'}/>
             <img src={thumb}
                  alt={title}
                  className={'post__image'}/>

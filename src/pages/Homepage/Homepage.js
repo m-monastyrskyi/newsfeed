@@ -80,7 +80,7 @@ const Homepage = () => {
 
     return (
         <div className={'container'}>
-            <main className="posts">
+            <main className={'posts'}>
                 {
                     posts.map((post, i) => <SinglePost post={post} key={i}/>)
                 }
