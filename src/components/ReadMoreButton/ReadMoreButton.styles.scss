@@ -1,0 +1,22 @@
+.read-more {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  background: #000000;
+  color: #cccccc;
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+  border: 1px solid #444;
+  font-size: 12px;
+  text-decoration: none;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+  &:hover {
+    background: #cccccc;
+    color: #000000;
+  }
+}

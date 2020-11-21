@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from './Homepage.module.scss'
+import './Homepage.styles.scss'
 import SinglePost from '../../components/SinglePost'
 
 const samplePosts = [
@@ -79,11 +79,13 @@ const Homepage = () => {
     const [posts, setPosts] = useState(samplePosts)
 
     return (
-        <main className={styles.container}>
-            {
-                posts.map((post, i) => <SinglePost post={post} key={i}/>)
-            }
-        </main>
+        <div className={'container'}>
+            <main className="posts">
+                {
+                    posts.map((post, i) => <SinglePost post={post} key={i}/>)
+                }
+            </main>
+        </div>
     )
 }
 
