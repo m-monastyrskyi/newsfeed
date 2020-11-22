@@ -8,14 +8,14 @@ const SinglePost = ({ post }) => {
     const { title, thumb, date, excerpt, url } = post
     const formattedDate = format(parseISO(date), 'dd MMMM yyyy', {
         locale: pl,
-    });
+    })
 
     return (
         <article className={'post'}>
-            <a href={url} className={'post__link'}/>
-            <img src={thumb}
-                 alt={title}
-                 className={'post__image'}/>
+            <a href={url} className={'post__link'}>Czytaj cały artykuł</a>
+
+            {/*<img src={thumb} alt={title} className={'post__image'}/>*/}
+            <img src={"http://placekitten.com/500/500"} alt={title} className={'post__image'}/>
             <div className={'post__text-wrapper'}>
                 <h2 className={'post__title'}>{title}</h2>
                 <div className={'post__date'}>{formattedDate}</div>
