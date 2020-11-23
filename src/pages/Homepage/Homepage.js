@@ -10,7 +10,8 @@ const Homepage = () => {
 
     const getPosts = (page) => {
         const limit = 10
-        axios(`http://localhost:4000/posts?_page=${page}&_limit=${limit}`)
+        const url = `http://localhost:4000/posts?_page=${page}&_limit=${limit}`
+        axios(url)
             .then(res => {
                 const isLast = page === Math.ceil(res.headers['x-total-count'] / limit)
                 isLast && setHasMoreItems(false)
@@ -29,6 +30,7 @@ const Homepage = () => {
             hasMore={hasMoreItems}
             loader={<div className={'loading'} key={0}/>}>
             <div className={'container'}>
+                <h1 className={'page-description'}>Newsfeed wykorzystujący react-infinite-scroller</h1>
                 <main className={'posts'}>
                     {
                         posts.map((post, i) => <SinglePost post={post} key={i}/>)
